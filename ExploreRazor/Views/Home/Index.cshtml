@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    var number = "32";
+    int num;
+    if (number.IsInt() == true)
+    {
+        num = number.AsInt();
+        <h5>@num is Integer Vaule</h5>
+    }
+    else
+    {
+        <h5>@number is Not Integer</h5>
+    }
+}
+
+
+@*var v = "12.52";
+    float f;
+    if (v.IsFloat() == true)
+    {
+        f = v.AsFloat();
+        <h5>@f</h5>
+    }
+*@
+@{
+    var v = "123.345";
+    decimal d;
+    if (v.IsDecimal() == true)
+    {
+        d = v.AsDecimal();
+        <h5>@d</h5>
+    }
+}
+@{ 
+    int[] arr= { 2, 6, 2, 55, 62, 64, 67 };
+    foreach(int x in arr)
+    {
+        <span>@x,</span>
+    }
+}
+<br />
+<br />
+@{ 
+    for (int i = 12; i <=42; i++)
+    {
+        if(i % 2 == 0)
+        {
+            <span>@i</span>
+        }
+    }
+}
